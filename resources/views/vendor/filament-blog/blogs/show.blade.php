@@ -30,8 +30,8 @@
                     <div class="space-y-10">
                         <div>
                             <div class="flex flex-col justify-end">
-                                <div class="mb-6 h-full w-full overflow-hidden rounded bg-slate-200">
-                                    <img class="flex h-full min-h-[400px] items-center justify-center object-cover object-top text-sm text-xl font-semibold text-slate-400" src="{{ $post->featurePhoto  }}" alt="{{ $post->photo_alt_text }}">
+                                <div class="mb-6 w-full overflow-hidden rounded bg-slate-200">
+                                    <img class="w-full h-auto aspect-video object-cover" src="{{ $post->featurePhoto  }}" alt="{{ $post->photo_alt_text }}">
                                 </div>
                                 <div class="mb-6">
                                     <h1 class="mb-6 text-4xl font-semibold">
@@ -60,9 +60,9 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <article class="m-auto leading-6">
-
-                                        {!! tiptap_converter()->asHTML($post->body, toc: true, maxDepth: 3) !!}
+                                    <article class="m-auto leading-6 prose prose-slate max-w-none">
+                                        
+                                        {!! Str::markdown($post->body) !!}
                                     </article>
 
                                     @if($post->tags->count())

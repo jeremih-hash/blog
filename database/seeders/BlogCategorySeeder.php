@@ -16,24 +16,44 @@ class BlogCategorySeeder extends Seeder
     {
         $categories = [
             [
+                'name' => 'Politics',
+                'description' => 'Political news, government updates, and policy changes',
+            ],
+            [
+                'name' => 'Business',
+                'description' => 'Business news, economy, markets, and corporate updates',
+            ],
+            [
+                'name' => 'Health',
+                'description' => 'Healthcare news, medical research, and public health',
+            ],
+            [
+                'name' => 'Sports',
+                'description' => 'Sports news, matches, and athlete updates',
+            ],
+            [
                 'name' => 'Technology',
-                'description' => 'Latest tech news and innovations',
+                'description' => 'Technology news, innovations, and digital trends',
             ],
             [
-                'name' => 'Travel',
-                'description' => 'Travel guides and adventures',
+                'name' => 'Environment',
+                'description' => 'Environmental news, climate change, and conservation',
             ],
             [
-                'name' => 'Lifestyle',
-                'description' => 'Tips for better living',
+                'name' => 'Education',
+                'description' => 'Education news, academic updates, and learning',
             ],
             [
-                'name' => 'Food & Cooking',
-                'description' => 'Recipes and culinary adventures',
+                'name' => 'Crime & Justice',
+                'description' => 'Crime reports, legal proceedings, and justice system news',
             ],
             [
-                'name' => 'Programming',
-                'description' => 'Coding tutorials and best practices',
+                'name' => 'Entertainment',
+                'description' => 'Entertainment news, arts, and culture',
+            ],
+            [
+                'name' => 'General News',
+                'description' => 'General and miscellaneous news coverage',
             ],
         ];
 

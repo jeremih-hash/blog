@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         // Run the blog seeders
         $this->call([
+            AdminUserSeeder::class,
             BlogCategorySeeder::class,
             BlogPostSeeder::class,
             BlogTagSeeder::class,

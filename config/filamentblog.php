@@ -44,6 +44,17 @@ return [
         ],
     ],
 
+    'content' => [
+        'parser' => 'markdown', // Enable Markdown parsing
+        'editor' => [
+            'type' => 'markdown',
+            'toolbar' => [
+                'heading', 'bold', 'italic', 'blockquote', 'code',
+                'bulletList', 'orderedList', 'link', 'horizontalRule'
+            ],
+        ],
+    ],
+
     'recaptcha' => [
         'enabled' => false, // true or false
         'site_key' => env('RECAPTCHA_SITE_KEY'),
