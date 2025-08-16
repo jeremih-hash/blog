@@ -120,6 +120,11 @@
                 </div>
             </div>
 
+            <!-- Include Jackpots Section -->
+            <div class="relative mb-20 w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
+                <x-jackpots-section />
+            </div>
+
             <div>
                 <div>
                     <div class="relative mb-6 flex items-center gap-x-8">

@@ -1,5 +1,5 @@
 @props(['title' =>'Firefly Blog', 'logo' => null] )
-<header @click.outside="showSearchModal = false" x-data="{ showSearchModal: false }" class="sticky top-0 z-[94035] mb-4">
+<header @click.outside="showSearchModal = false" x-data="{ showSearchModal: false }" class="sticky top-0 z-[94035]">
     <div class="py-4 bg-white border-b">
         <div class="container mx-auto">
             <div class="flex justify-between gap-x-4">
