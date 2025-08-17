@@ -40,7 +40,7 @@ return [
         'meta' => [
             'title' => 'Filament Blog',
             'description' => 'This is filament blog seo meta description',
-            'keywords' => [],
+            'keywords' => ['Kenya', 'Football', 'Betting Tips', 'Predictions', 'Odibet', 'Jackpot'],
         ],
     ],
 
