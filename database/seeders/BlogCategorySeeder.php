@@ -16,44 +16,44 @@ class BlogCategorySeeder extends Seeder
     {
         $categories = [
             [
-                'name' => 'Politics',
-                'description' => 'Political news, government updates, and policy changes',
+                'name' => 'Football Betting',
+                'description' => 'Football betting tips, predictions, and strategies for Kenyan bettors',
             ],
             [
-                'name' => 'Business',
-                'description' => 'Business news, economy, markets, and corporate updates',
+                'name' => 'Jackpots',
+                'description' => 'Jackpot predictions, analysis, and winning strategies for Kenyan betting sites',
             ],
             [
-                'name' => 'Health',
-                'description' => 'Healthcare news, medical research, and public health',
+                'name' => 'Betting Guides',
+                'description' => 'Comprehensive guides on how to bet successfully in Kenya',
             ],
             [
-                'name' => 'Sports',
-                'description' => 'Sports news, matches, and athlete updates',
+                'name' => 'Payment Methods',
+                'description' => 'Information about deposit and withdrawal options for Kenyan betting sites',
             ],
             [
-                'name' => 'Technology',
-                'description' => 'Technology news, innovations, and digital trends',
+                'name' => 'VIP Tips',
+                'description' => 'Premium betting tips and predictions with high accuracy rates',
             ],
             [
-                'name' => 'Environment',
-                'description' => 'Environmental news, climate change, and conservation',
+                'name' => 'Betting Sites',
+                'description' => 'Reviews and comparisons of popular betting sites in Kenya',
             ],
             [
-                'name' => 'Education',
-                'description' => 'Education news, academic updates, and learning',
+                'name' => 'Betting Promotions',
+                'description' => 'Latest bonuses, free bets, and promotional offers from Kenyan bookmakers',
             ],
             [
-                'name' => 'Crime & Justice',
-                'description' => 'Crime reports, legal proceedings, and justice system news',
+                'name' => 'Live Betting',
+                'description' => 'Tips and strategies for in-play betting on Kenyan betting platforms',
             ],
             [
-                'name' => 'Entertainment',
-                'description' => 'Entertainment news, arts, and culture',
+                'name' => 'Casino Games',
+                'description' => 'Information about online casino games available to Kenyan players',
             ],
             [
-                'name' => 'General News',
-                'description' => 'General and miscellaneous news coverage',
+                'name' => 'Responsible Gambling',
+                'description' => 'Resources and advice for responsible gambling practices in Kenya',
             ],
         ];
 

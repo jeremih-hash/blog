@@ -41,7 +41,11 @@
 
                                         <!-- Posts Grid -->
                                         <div class="grid grid-cols-2 gap-4 mb-6">
-                                            @foreach(\Firefly\FilamentBlog\Models\Category::where('name', 'LIKE', '%jackpot%')->first()->posts()->latest()->limit(6)->get() as $post)
+                                            @php
+                                                $jackpotCategory = \Firefly\FilamentBlog\Models\Category::where('name', 'LIKE', '%jackpot%')->first();
+                                                $posts = $jackpotCategory ? $jackpotCategory->posts()->latest()->limit(6)->get() : collect([]);
+                                            @endphp
+                                            @foreach($posts as $post)
                                                 <a href="{{ route('filamentblog.post.show', ['post' => $post->slug]) }}" 
                                                    class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all duration-200">
                                                     <span class="text-amber-400 mt-1">🏆</span>

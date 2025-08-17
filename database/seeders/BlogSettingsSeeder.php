@@ -14,29 +14,29 @@ class BlogSettingsSeeder extends Seeder
     public function run(): void
     {
         Setting::create([
-            'title' => 'Firefly Blog',
-            'description' => 'A modern blog powered by Laravel and Filament',
-            'organization_name' => 'Firefly Blog',
+            'title' => 'Kenya Betting Tips',
+            'description' => 'Kenya\'s #1 Football Betting Tips Platform - Free Predictions & Jackpot Analysis',
+            'organization_name' => 'Kenya Betting Tips',
             'quick_links' => [
                 [
-                    'label' => 'Technology Blog',
-                    'url' => 'https://127.0.0.1:8001/blogs/category/technology'
+                    'label' => 'Football Betting',
+                    'url' => '/blogs/category/football-betting'
                 ],
                 [
-                    'label' => 'Programming Tutorials',
-                    'url' => 'https://127.0.0.1:8001/blogs/category/programming'
+                    'label' => 'Jackpots',
+                    'url' => '/blogs/category/jackpots'
                 ],
                 [
-                    'label' => 'Travel Stories',
-                    'url' => 'https://127.0.0.1:8001/blogs/category/travel'
+                    'label' => 'Betting Guides',
+                    'url' => '/blogs/category/betting-guides'
                 ],
                 [
-                    'label' => 'About Us',
-                    'url' => 'https://127.0.0.1:8001/about'
+                    'label' => 'VIP Tips',
+                    'url' => '/blogs/category/vip-tips'
                 ],
                 [
                     'label' => 'Contact',
-                    'url' => 'https://127.0.0.1:8001/contact'
+                    'url' => '/contact'
                 ]
             ]
         ]);

@@ -17,10 +17,10 @@ class DatabaseSeeder extends Seeder
         $this->call([
             AdminUserSeeder::class,
             BlogCategorySeeder::class,
-            BlogPostSeeder::class,
             BlogTagSeeder::class,
             BlogShareSnippetSeeder::class,
             BlogSettingsSeeder::class,
+            SportsBettingPostSeeder::class,
         ]);
     }
 }
