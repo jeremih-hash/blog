@@ -1,0 +1,83 @@
+/* Popup Modal Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Additional modal styling */
+#welcomePopup {
+    transition: all 0.3s ease-out;
+}
+
+#welcomePopup > div > div {
+    transition: transform 0.3s ease-out;
+}
+
+/* Button Hover Effects */
+#closePopupBtn:hover svg,
+#bottomCloseBtn:hover svg {
+    transform: scale(1.1);
+}
+
+#closePopupBtn svg,
+#bottomCloseBtn svg {
+    transition: transform 0.2s ease;
+}
+
+/* Floating animation for illustration */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Apply floating animation to the illustration */
+#welcomePopup .relative.h-40 svg {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Animated gradient background */
+#welcomePopup .bg-gradient-to-br {
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/* Hover effects for buttons */
+#welcomePopup a:hover, 
+#welcomePopup button:hover {
+    transform: translateY(-1px);
+}
+
+#welcomePopup a:active, 
+#welcomePopup button:active {
+    transform: translateY(0);
+}

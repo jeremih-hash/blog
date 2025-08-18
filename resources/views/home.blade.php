@@ -1,4 +1,6 @@
 <x-blog-layout>
+    <!-- Include Popup Modal Component -->
+    <x-popup-modal />
     <!-- Hero Section with Enhanced Schema.org markup - Two-part layout with illustration -->
     <section class="relative bg-[#0F172A] text-white py-16 md:py-24 overflow-hidden -mt-[4.5rem]" 
              itemscope itemtype="https://schema.org/WebSite">
@@ -1330,3 +1332,9 @@
         }
     });
 </script>
+
+<!-- Popup Modal JavaScript -->
+<script src="{{ asset('build/assets/popup-modal-DGguMsrc.js') }}"></script>
+
+<!-- Popup Modal CSS -->
+<link rel="stylesheet" href="{{ asset('build/assets/popup-modal-ASvdgryh.css') }}">
