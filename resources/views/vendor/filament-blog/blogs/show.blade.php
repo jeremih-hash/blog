@@ -38,7 +38,7 @@
                                     <p>{{ $post->sub_title }}</p>
                                     <div class="mt-2">
                                         @foreach ($post->categories as $category)
-                                        <a href="{{ url('/category/'.$category->slug) }}">
+                                        <a href="{{ url('/categories/'.$category->slug) }}">
                                             <span class="bg-primary-200 text-primary-800 mr-2 inline-flex rounded-full px-2 py-1 text-xs font-semibold">{{ $category->name }}
                                             </span>
                                         </a>

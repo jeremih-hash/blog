@@ -34,7 +34,7 @@
             </div>
             
             <div class="flex justify-end mt-4">
-                <a href="{{ url('/category/'.$category->slug) }}" 
+                <a href="{{ url('/categories/'.$category->slug) }}" 
                    class="inline-block px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-md text-sm font-medium transition-all duration-300">
                    View All {{ $category->name }}
                 </a>

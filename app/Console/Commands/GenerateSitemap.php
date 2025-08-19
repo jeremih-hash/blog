@@ -79,7 +79,7 @@ class GenerateSitemap extends Command
         
         Category::all()->each(function (Category $category) use ($sitemap) {
             $sitemap->add(
-                Url::create(url('/category/' . $category->slug))
+                Url::create(url('/categories/' . $category->slug))
                     ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
                     ->setPriority(0.7)
             );
