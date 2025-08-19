@@ -60,10 +60,100 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <article class="m-auto leading-6 prose prose-slate max-w-none">
+                                    <article class="m-auto leading-6 prose prose-slate max-w-none post-content">
                                         
-                                        {!! Str::markdown($post->body) !!}
+                                        {!! $post->body !!}
                                     </article>
+                                    
+                                    <style>
+                                        /* Regular links */
+                                        .post-content a {
+                                            color: #3b82f6 !important; /* Blue color for links */
+                                            text-decoration: underline !important;
+                                            cursor: pointer !important;
+                                        }
+                                        .post-content a:hover {
+                                            color: #2563eb !important; /* Darker blue on hover */
+                                        }
+                                        
+                                        /* Button links from Tiptap editor - using data-attributes */
+                                        .post-content a[data-type="button"],
+                                        .post-content a[data-button],
+                                        .post-content a.button,
+                                        .post-content a[class*="button"] {
+                                            display: inline-block !important;
+                                            padding: 0.5rem 1rem !important;
+                                            background-color: #f59e0b !important; /* Amber from your theme */
+                                            color: white !important;
+                                            border-radius: 0.375rem !important;
+                                            text-decoration: none !important;
+                                            font-weight: 500 !important;
+                                            transition: all 0.2s !important;
+                                        }
+                                        
+                                        .post-content a[data-type="button"]:hover,
+                                        .post-content a[data-button]:hover,
+                                        .post-content a.button:hover,
+                                        .post-content a[class*="button"]:hover {
+                                            background-color: #d97706 !important;
+                                        }
+                                        
+                                        /* Primary button */
+                                        .post-content a[data-button="primary"],
+                                        .post-content a.button-primary,
+                                        .post-content a[data-theme="primary"] {
+                                            background-color: #f59e0b !important; /* Amber from your theme */
+                                            color: white !important;
+                                        }
+                                        
+                                        .post-content a[data-button="primary"]:hover,
+                                        .post-content a.button-primary:hover,
+                                        .post-content a[data-theme="primary"]:hover {
+                                            background-color: #d97706 !important;
+                                        }
+                                        
+                                        /* Secondary button */
+                                        .post-content a[data-button="secondary"],
+                                        .post-content a.button-secondary,
+                                        .post-content a[data-theme="secondary"] {
+                                            background-color: #6b7280 !important;
+                                            color: white !important;
+                                        }
+                                        
+                                        .post-content a[data-button="secondary"]:hover,
+                                        .post-content a.button-secondary:hover,
+                                        .post-content a[data-theme="secondary"]:hover {
+                                            background-color: #4b5563 !important;
+                                        }
+                                        
+                                        /* Tertiary button */
+                                        .post-content a[data-button="tertiary"],
+                                        .post-content a.button-tertiary,
+                                        .post-content a[data-theme="tertiary"] {
+                                            background-color: #e5e7eb !important;
+                                            color: #374151 !important;
+                                        }
+                                        
+                                        .post-content a[data-button="tertiary"]:hover,
+                                        .post-content a.button-tertiary:hover,
+                                        .post-content a[data-theme="tertiary"]:hover {
+                                            background-color: #d1d5db !important;
+                                        }
+                                        
+                                        /* Accent button */
+                                        .post-content a[data-button="accent"],
+                                        .post-content a.button-accent,
+                                        .post-content a[data-theme="accent"] {
+                                            background-color: #ec4899 !important;
+                                            color: white !important;
+                                        }
+                                        
+                                        .post-content a[data-button="accent"]:hover,
+                                        .post-content a.button-accent:hover,
+                                        .post-content a[data-theme="accent"]:hover {
+                                            background-color: #db2777 !important;
+                                        }
+                                    </style>
 
                                     @if($post->tags->count())
                                     <div class="pt-10">
