@@ -13,8 +13,13 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         // Fetch new videos every 30 minutes and process them into blog posts
-        $schedule->command('youtube:fetch-videos --process')
-                ->everyThirtyMinutes()
+        // $schedule->command('youtube:fetch-videos --process')
+        //         ->everyThirtyMinutes()
+        //         ->withoutOverlapping();
+                
+        // Generate sitemap daily at midnight
+        $schedule->command('sitemap:generate')
+                ->daily()
                 ->withoutOverlapping();
     }
 
