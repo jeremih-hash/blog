@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             color: 'yellow',
             playStoreUrl: 'https://play.google.com/store/apps/details?id=com.doublechancepredictions.mobile',
             appStoreUrl: 'https://apps.apple.com/app/id6743367576',  // Double Chance Predictions ID
-            promo: 'Download now and enjoy premium features for free',
+            promo: 'Download now for daily winning betting tips',
             backgroundImage: '/images/doublechanceprediction.png',
             darkMode: true
         },
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             color: 'red',
             playStoreUrl: 'https://play.google.com/store/apps/details?id=com.goalmind.soccerpredictions',
             appStoreUrl: 'https://apps.apple.com/app/id6747434463',  // Goal Mind Soccer Predictions ID
-            promo: 'Download now and enjoy premium features for free',
+            promo: 'Download now for daily winning betting tips',
             backgroundImage: '/images/goalmind.png',
             darkMode: true
         },
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             color: 'amber',
             playStoreUrl: 'https://play.google.com/store/apps/details?id=com.topfootballapp.mobile',
             appStoreUrl: 'https://apps.apple.com/app/id6742139266',  // Top Football Predictions ID
-            promo: 'Download now and enjoy premium features for free',
+            promo: 'Download now for daily winning betting tips',
             backgroundImage: '/images/topfootball.png',
             darkMode: true
         },
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
             color: 'yellow',
             playStoreUrl: 'https://play.google.com/store/apps/details?id=com.over15dailybettingtips.app',
             appStoreUrl: 'https://apps.apple.com/app/id6747388466',  // Over 1.5+ Daily Betting Tips ID
-            promo: 'Download now and enjoy premium features for free',
+            promo: 'Download now for daily winning betting tips',
             backgroundImage: '/images/over1.5app.png',
             darkMode: true
         },
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
             color: 'yellow',
             playStoreUrl: 'https://play.google.com/store/apps/details?id=com.twoplusodds.predictions',
             appStoreUrl: 'https://apps.apple.com/app/id6747434122',  // 2+ Odds Predictions ID
-            promo: 'Download now and enjoy premium features for free',
+            promo: 'Download now for daily winning betting tips',
             backgroundImage: '/images/2oddspredictions.png',
             darkMode: true
         }
