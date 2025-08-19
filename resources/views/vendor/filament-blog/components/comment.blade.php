@@ -1,5 +1,5 @@
 @props(['post'])
-<form action="{{ route('filamentblog.comment.store', ['post' => $post->slug]) }}" method="POST" id="comments">
+<form action="{{ url('/comment/'.$post->slug) }}" method="POST" id="comments">
     @csrf
     <div class="border-t-2 py-10">
         <div class="mb-7">

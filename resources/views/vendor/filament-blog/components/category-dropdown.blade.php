@@ -20,7 +20,7 @@
             <!-- Posts Grid -->
             <div class="grid grid-cols-2 gap-4 mb-6">
                 @foreach($category->posts()->latest()->limit(6)->get() as $post)
-                    <a href="{{ route('filamentblog.post.show', ['post' => $post->slug]) }}" 
+                    <a href="{{ url('/'.$post->slug) }}" 
                        class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-all duration-200">
                         <span class="text-amber-400 mt-1">🏆</span>
                         <div>
@@ -35,12 +35,12 @@
 
             <!-- Footer Actions -->
             <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-                <a href="{{ route('filamentblog.category.post', ['category' => $category->slug]) }}" 
+                <a href="{{ url('/category/'.$category->slug) }}" 
                    class="text-sm text-gray-600 hover:text-primary-600 font-medium">
                     View All {{ $category->name }} Posts
                 </a>
                 
-                <a href="{{ route('filamentblog.category.post', ['category' => $category->slug]) }}" 
+                <a href="{{ url('/category/'.$category->slug) }}" 
                    class="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors text-sm font-medium">
                     Explore {{ $category->name }}
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">

@@ -18,7 +18,7 @@
             
             <div class="grid grid-cols-2 gap-4 mb-4">
                 @forelse($posts as $post)
-                    <a href="{{ route('filamentblog.post.show', ['post' => $post->slug]) }}"
+                    <a href="{{ url('/'.$post->slug) }}"
                        class="flex items-center gap-2 py-2 text-sm font-medium transition-all duration-300 cursor-pointer hover:text-primary-600"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500" viewBox="0 0 24 24" fill="currentColor">
@@ -34,7 +34,7 @@
             </div>
             
             <div class="flex justify-end mt-4">
-                <a href="{{ route('filamentblog.category.post', ['category' => $category->slug]) }}" 
+                <a href="{{ url('/category/'.$category->slug) }}" 
                    class="inline-block px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-md text-sm font-medium transition-all duration-300">
                    View All {{ $category->name }}
                 </a>
