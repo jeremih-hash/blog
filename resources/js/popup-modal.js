@@ -9,29 +9,33 @@ document.addEventListener('DOMContentLoaded', function() {
     const apps = [
         {
             id: 'double-chance',
-            name: 'Double Chance app',
-            title: 'Double Chance Predictions',
-            description: 'Get the most accurate Double Chance predictions for today\'s matches!',
-            icon: 'chart-bar',
+            name: 'Double Chance Predictions',
+            title: '',
+            description: '',
+            icon: '',
             color: 'yellow',
             playStoreUrl: 'https://play.google.com/store/apps/details?id=com.doublechancepredictions.mobile',
             appStoreUrl: 'https://apps.apple.com/app/id6743367576',  // Double Chance Predictions ID
-            promo: 'Over 80% success rate on all predictions'
+            promo: 'Download now and enjoy premium features for free',
+            backgroundImage: '/images/doublechanceprediction.png',
+            darkMode: true
         },
         {
             id: 'goal-mind',
-            name: 'Goal Mind',
-            title: 'Goal Mind Soccer Predictions',
-            description: 'Expert analysis and predictions for all major soccer leagues worldwide',
-            icon: 'globe',
+            name: 'Goal Mind Soccer Predictions',
+            title: '',
+            description: '',
+            icon: '',
             color: 'red',
             playStoreUrl: 'https://play.google.com/store/apps/details?id=com.goalmind.soccerpredictions',
             appStoreUrl: 'https://apps.apple.com/app/id6747434463',  // Goal Mind Soccer Predictions ID
-            promo: 'Daily free tips and premium VIP packages available'
+            promo: 'Download now and enjoy premium features for free',
+            backgroundImage: '/images/goalmind.png',
+            darkMode: true
         },
         {
             id: 'topfootball',
-            name: 'Top Football predictions',
+            name: 'Top Football Predictions',
             title: '',
             description: '',
             icon: '',
@@ -57,14 +61,16 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 'odds-predictions',
-            name: '2+ Odds',
-            title: '2+ Odds Predictions',
-            description: 'Daily selections of matches with odds of 2.00 or higher',
-            icon: 'currency-dollar',
+            name: '2+ Odds Predictions',
+            title: '',
+            description: '',
+            icon: '',
             color: 'yellow',
             playStoreUrl: 'https://play.google.com/store/apps/details?id=com.twoplusodds.predictions',
             appStoreUrl: 'https://apps.apple.com/app/id6747434122',  // 2+ Odds Predictions ID
-            promo: 'Build your bankroll with our carefully selected value bets'
+            promo: 'Download now and enjoy premium features for free',
+            backgroundImage: '/images/2oddspredictions.png',
+            darkMode: true
         }
     ];
     
