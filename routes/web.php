@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SitemapController;
+use Filament\Http\Controllers\Auth\LoginController;
 
 Route::get('/', function () {
     return view('home');
@@ -20,3 +21,9 @@ Route::get('/vip-soccer-betting-tips', function () {
 });
 
 Route::get('/sitemap.xml', [SitemapController::class, 'index']);
+
+// Admin routes
+Route::name('filament.')->group(function () {
+    Route::get('admin/login', [LoginController::class, 'create'])->name('auth.login');
+    Route::post('admin/login', [LoginController::class, 'store']);
+});
