@@ -11,7 +11,7 @@
  * | The recaptcha configuration is for setting up the recaptcha for the blog.
  */
 
-use Firefly\FilamentBlog\Models\User;
+use App\Models\User;
 
 return [
     'tables' => [
@@ -20,12 +20,13 @@ return [
     'route' => [
         'prefix' => '',
         'middleware' => ['web'],
-        //        'home' => [
-        //            'name' => 'filamentblog.home',
-        //            'url' => env('APP_URL'),
-        //        ],
+        'home' => [
+            'name' => 'filamentblog.home',
+            'url' => env('APP_URL'),
+        ],
         'login' => [
             'name' => 'filamentblog.post.login',
+            'url' => '/admin/login',
         ],
     ],
     'user' => [
@@ -38,8 +39,8 @@ return [
     ],
     'seo' => [
         'meta' => [
-            'title' => 'Filament Blog',
-            'description' => 'This is filament blog seo meta description',
+            'title' => 'Top Football App - Football Betting Tips & Predictions',
+            'description' => 'Get the best football betting tips and predictions',
             'keywords' => ['Kenya', 'Football', 'Betting Tips', 'Predictions', 'Odibet', 'Jackpot'],
         ],
     ],
@@ -56,7 +57,7 @@ return [
     ],
 
     'recaptcha' => [
-        'enabled' => false, // true or false
+        'enabled' => false,
         'site_key' => env('RECAPTCHA_SITE_KEY'),
         'secret_key' => env('RECAPTCHA_SECRET_KEY'),
     ],
