@@ -1,18 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\SitemapController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/football-predictions', function () {
+    return view('football-predictions');
+});
+
+Route::get('/soccer-betting-tips', function () {
+    return view('soccer-betting-tips');
+});
+
+Route::get('/vip-soccer-betting-tips', function () {
+    return view('vip-soccer-betting-tips');
+});
+
+Route::get('/sitemap.xml', [SitemapController::class, 'index']);
