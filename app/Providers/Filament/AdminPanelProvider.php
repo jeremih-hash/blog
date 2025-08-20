@@ -18,6 +18,7 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use App\Models\User;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -57,6 +58,10 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->plugins([
                 Blog::make()
-            ]);
+            ])
+            ->authGuard('web')
+            ->authPasswordBroker('users')
+            ->profile()
+            ->maxContentWidth('full');
     }
 }
