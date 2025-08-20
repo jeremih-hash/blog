@@ -17,6 +17,10 @@
                         @endif
                     </a>
                     <div class="hidden gap-x-10 sm:flex">
+                        <a href="{{ url('/football-predictions') }}" class="font-semibold text-md hover:text-primary-600">Free Tips</a>
+                        <a href="{{ url('/soccer-betting-tips') }}" class="font-semibold text-md hover:text-primary-600">Soccer Betting Tips</a>
+                        <a href="{{ url('/vip-soccer-betting-tips') }}" class="font-semibold text-md hover:text-primary-600">VIP Soccer Betting Tips</a>
+                        
                         @foreach($categories as $category)
                         <div class="relative group">
                             <button class="flex items-center justify-center font-semibold text-md hover:text-primary-600 gap-x-2">

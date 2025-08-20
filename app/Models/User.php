@@ -47,11 +47,4 @@ class User extends Authenticatable
         ];
     }
 
-    /**
-     * Determine if the user can comment on blog posts.
-     */
-    public function canComment(): bool
-    {
-        return true; // You can modify this with your own logic
-    }
 }
