@@ -64,7 +64,7 @@ class GenerateSitemap extends Command
         Post::published()->get()->each(function (Post $post) use ($sitemap) {
             $sitemap->add(
                 Url::create(url('/' . $post->slug))
-                    ->setLastModificationDate($post->updated_at)
+                    ->setLastModificationDate(now())
                     ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
                     ->setPriority(0.8)
             );
