@@ -21,6 +21,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        if(config('app.env') !== 'local') {
+            \URL::forceScheme('https');
+        }
         // Register the popup modal component
         Blade::component('popup-modal', PopupModal::class);
     }
