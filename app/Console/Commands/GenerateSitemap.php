@@ -24,15 +24,15 @@ class GenerateSitemap extends Command
         
         // Generate main sitemap (homepage, posts, and all posts page)
         $this->generateMainSitemap();
-        $sitemapIndex->add('/sitemap-main.xml');
+        $sitemapIndex->add(url('/sitemap-main.xml'));
         
         // Generate categories sitemap
         $this->generateCategoriesSitemap();
-        $sitemapIndex->add('/sitemap-categories.xml');
+        $sitemapIndex->add(url('/sitemap-categories.xml'));
         
         // Generate a single tags sitemap with all tags
         $this->generateTagsSitemap();
-        $sitemapIndex->add('/sitemap-tags.xml');
+        $sitemapIndex->add(url('/sitemap-tags.xml'));
         
         // Write sitemap index to file
         $sitemapIndex->writeToFile(public_path('sitemap.xml'));
@@ -109,7 +109,7 @@ class GenerateSitemap extends Command
         // Add all tags to the sitemap
         foreach ($tags as $tag) {
             $sitemap->add(
-                Url::create(url('/tag/' . $tag->slug))
+                Url::create(url('/tags/' . $tag->slug))
                     ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
                     ->setPriority(0.6)
             );
