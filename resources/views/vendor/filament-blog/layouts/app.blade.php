@@ -275,6 +275,8 @@
             document.getElementById("comment-box").submit();
         }
     </script>
+    <!-- Monetag Code -->
+    <script src="https://fpyf8.com/88/tag.min.js" data-zone="164993" async data-cfasync="false"></script>
 </body>
 
 </html>
