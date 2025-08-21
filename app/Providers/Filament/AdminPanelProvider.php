@@ -41,6 +41,10 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
+                \App\Filament\Widgets\AppClickStats::class,
+                \App\Filament\Widgets\AppClicksChart::class,
+                \App\Filament\Widgets\AppClicksPieChart::class,
+                \App\Filament\Widgets\ClickTypesPieChart::class,
             ])
             ->middleware([
                 EncryptCookies::class,

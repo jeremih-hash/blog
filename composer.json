@@ -10,6 +10,7 @@
         "athlon1600/youtube-downloader": "^4.0",
         "erusev/parsedown": "^1.7",
         "filament/filament": "^3.2",
+        "filament/widgets": "^3.3",
         "firefly/filament-blog": "^2.0",
         "google/apiclient": "^2.18",
         "guzzlehttp/guzzle": "^7.9",

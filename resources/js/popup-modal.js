@@ -99,8 +99,14 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Current time:', new Date(currentTime).toLocaleString());
     console.log('Should show popup:', shouldShowPopup);
     
-    // Get a random app index
-    let currentAppIndex = Math.floor(Math.random() * apps.length);
+    // Get the last shown app index
+    const lastAppIndex = parseInt(localStorage.getItem('lastAppIndex')) || -1;
+    
+    // Get a random app index different from the last one
+    let currentAppIndex;
+    do {
+        currentAppIndex = Math.floor(Math.random() * apps.length);
+    } while (currentAppIndex === lastAppIndex && apps.length > 1);
     
     // Save the current app index
     localStorage.setItem('lastAppIndex', currentAppIndex.toString());
