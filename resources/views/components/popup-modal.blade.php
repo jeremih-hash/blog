@@ -4,7 +4,7 @@
     <div class="absolute inset-0 bg-black bg-opacity-80"></div>
     
     <!-- Modal Content -->
-    <div class="relative w-[450px] h-[700px] overflow-hidden rounded-xl shadow-2xl">
+    <div class="relative w-[90%] max-w-[450px] h-[90vh] max-h-[700px] overflow-hidden rounded-xl shadow-2xl">
         <!-- Close Button -->
         <button id="closePopupBtn" class="absolute top-3 right-3 z-20 text-white hover:text-amber-300 focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -26,24 +26,24 @@
         </div>
         
         <!-- Content Container -->
-        <div class="relative z-10 p-6 text-white h-full flex flex-col">
+        <div class="relative z-10 p-4 sm:p-6 text-white h-full flex flex-col">
             <!-- Logo/Brand -->
-            <div class="flex justify-between items-center mb-6">
-                <div id="appName" class="text-2xl font-bold text-amber-400">App Name</div>
+            <div class="flex justify-between items-center mb-4 sm:mb-6">
+                <div id="appName" class="text-xl sm:text-2xl font-bold text-amber-400">App Name</div>
                 <div id="appDomain" class="text-sm text-white/70">topfootball.com</div>
             </div>
             
             <!-- Main Heading -->
-            <h3 class="text-3xl font-bold mb-2">
+            <h3 class="text-2xl sm:text-3xl font-bold mb-2">
                 <span id="appTitle" class="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400">
                     App Title
                 </span>
             </h3>
             
-            <p id="appDescription" class="text-xl font-medium mb-6">App description will appear here</p>
+            <p id="appDescription" class="text-lg sm:text-xl font-medium mb-4 sm:mb-6">App description will appear here</p>
             
             <!-- Illustration/Image -->
-            <div class="relative h-48 mb-6 flex justify-center flex-grow">
+            <div class="relative h-32 sm:h-48 mb-6 flex justify-center flex-grow">
                 <!-- App icon/illustration -->
                 <div class="absolute inset-0 flex items-center justify-center">
                     <svg id="appIcon" xmlns="http://www.w3.org/2000/svg" class="h-32 w-32 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -59,21 +59,21 @@
             
             <!-- App Download Button -->
             <a id="appDownloadButton" href="#" 
-               class="block w-full text-center py-4 px-4 text-white rounded-lg font-medium transition-all duration-300">
+               class="block w-full text-center py-2 sm:py-3 px-8 sm:px-12 text-white rounded-md font-medium transition-all duration-300 md:w-auto md:mx-auto inline-block bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 shadow-lg hover:shadow-xl">
                 Download Our App Now
             </a>
             
             <!-- Promotion details -->
-            <div class="mt-4 text-center text-xs text-white/70 flex-shrink-0">
+            <div class="mt-2 sm:mt-4 text-center text-xs text-white/70 flex-shrink-0">
                 <p id="appPromo">Promotion details will appear here</p>
                 
                 <!-- App store badges -->
-                <div class="flex justify-center space-x-4 mt-4">
+                <div class="flex justify-center space-x-2 sm:space-x-4 mt-2 sm:mt-4">
                     <a href="#" target="_blank" rel="noopener noreferrer" class="flex-shrink-0">
-                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play" class="h-14 w-auto" style="margin-top: -1px;" />
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play" class="h-10 sm:h-14 w-auto" style="margin-top: -1px;" />
                     </a>
                     <a href="#" target="_blank" rel="noopener noreferrer" class="flex-shrink-0">
-                        <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="App Store" class="h-12 w-auto" />
+                        <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="App Store" class="h-8 sm:h-12 w-auto" />
                     </a>
                 </div>
                 
