@@ -179,21 +179,46 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
+        // Track click function
+        const trackClick = async (clickType) => {
+            try {
+                await fetch('/track-app-click', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                    },
+                    body: JSON.stringify({
+                        app_id: currentApp.id,
+                        app_name: currentApp.name,
+                        click_type: clickType
+                    })
+                });
+            } catch (error) {
+                console.error('Error tracking click:', error);
+            }
+        };
+
         // Update download button
         const downloadButton = document.getElementById('appDownloadButton');
         if (downloadButton) {
-            // We'll use Play Store URL as the main button link
             downloadButton.href = currentApp.playStoreUrl;
             downloadButton.textContent = `Download ${currentApp.name} App`;
+            downloadButton.addEventListener('click', () => trackClick('download'));
         }
         
         // Update app store badges with correct URLs
         const appStoreBadges = document.querySelectorAll('img[alt="Google Play"], img[alt="App Store"]');
         if (appStoreBadges.length >= 2) {
             // First badge is Google Play
-            appStoreBadges[0].parentElement.href = currentApp.playStoreUrl;
+            const playStoreLink = appStoreBadges[0].parentElement;
+            playStoreLink.href = currentApp.playStoreUrl;
+            playStoreLink.addEventListener('click', () => trackClick('playstore'));
+            
             // Second badge is App Store
-            appStoreBadges[1].parentElement.href = currentApp.appStoreUrl;
+            const appStoreLink = appStoreBadges[1].parentElement;
+            appStoreLink.href = currentApp.appStoreUrl;
+            appStoreLink.addEventListener('click', () => trackClick('appstore'));
         }
         
         // Update modal content color theme and background image

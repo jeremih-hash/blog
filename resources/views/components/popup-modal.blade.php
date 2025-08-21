@@ -59,7 +59,7 @@
             
             <!-- App Download Button -->
             <a id="appDownloadButton" href="#" 
-               class="block w-full text-center py-4 px-4 bg-gradient-to-r from-amber-500 to-yellow-600 text-white rounded-lg font-medium transition-all duration-300 hover:from-amber-600 hover:to-yellow-700 hover:shadow-lg hover:shadow-amber-500/30">
+               class="block w-full text-center py-4 px-4 text-white rounded-lg font-medium transition-all duration-300">
                 Download Our App Now
             </a>
             

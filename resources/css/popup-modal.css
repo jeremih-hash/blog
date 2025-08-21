@@ -71,13 +71,27 @@
     animation: gradientShift 15s ease infinite;
 }
 
-/* Hover effects for buttons */
-#welcomePopup a:hover, 
-#welcomePopup button:hover {
-    transform: translateY(-1px);
+/* Button styles */
+#appDownloadButton {
+    background: linear-gradient(to right, #f59e0b, #d97706);
 }
 
-#welcomePopup a:active, 
-#welcomePopup button:active {
+#appDownloadButton:hover {
+    background: linear-gradient(to right, #d97706, #b45309);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+}
+
+#appDownloadButton:active {
+    transform: translateY(0);
+}
+
+/* Store badge hover effects */
+#welcomePopup .flex-shrink-0:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+#welcomePopup .flex-shrink-0:active {
     transform: translateY(0);
 }
