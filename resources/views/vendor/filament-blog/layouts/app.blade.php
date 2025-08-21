@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="monetag" content="707d63f1b0f35dc99e1fc1dfa8ada347">
     <link rel="icon" href="{{ $setting?->faviconImage }}" type="image/x-icon" />
     {!! \Firefly\FilamentBlog\Facades\SEOMeta::generate() !!}
     {!! $setting?->google_console_code !!}
@@ -275,8 +274,6 @@
             document.getElementById("comment-box").submit();
         }
     </script>
-    <!-- Monetag Code -->
-    <script src="https://fpyf8.com/88/tag.min.js" data-zone="164993" async data-cfasync="false"></script>
 </body>
 
 </html>
