@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             promo: 'Download now for daily winning betting tips',
             backgroundImage: '/images/goalmind.png',
             darkMode: true
-        },
+        }, 
         {
             id: 'topfootball',
             name: 'Top Football Predictions',
