@@ -433,25 +433,32 @@
     
     <!-- Tab Switching JavaScript -->
     <script>
-        function showTab(tabName) {
-            // Hide all tabs
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.add('hidden');
-            });
-            
-            // Show the selected tab
-            document.getElementById(tabName + '-tab').classList.remove('hidden');
-            
-            // Update active button styles
-            document.querySelectorAll('[role="group"] button').forEach(button => {
-                button.classList.remove('bg-amber-500', 'text-white');
-                button.classList.add('text-gray-300', 'hover:text-white', 'hover:bg-gray-700');
-            });
-            
-            // Set active button style
-            const activeButton = document.querySelector(`[onclick="showTab('${tabName}')"]`);
-            activeButton.classList.remove('text-gray-300', 'hover:text-white', 'hover:bg-gray-700');
-            activeButton.classList.add('bg-amber-500', 'text-white');
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            window.showTab = function(tabName) {
+                // Hide all tabs
+                document.querySelectorAll('.tab-content').forEach(tab => {
+                    tab.classList.add('hidden');
+                });
+                
+                // Show the selected tab
+                const selectedTab = document.getElementById(tabName + '-tab');
+                if (selectedTab) {
+                    selectedTab.classList.remove('hidden');
+                }
+                
+                // Update active button styles
+                document.querySelectorAll('[role="group"] button').forEach(button => {
+                    button.classList.remove('bg-amber-500', 'text-white');
+                    button.classList.add('text-gray-300', 'hover:text-white', 'hover:bg-gray-700');
+                });
+                
+                // Set active button style
+                const activeButton = document.querySelector(`[onclick="showTab('${tabName}')"]`);
+                if (activeButton) {
+                    activeButton.classList.remove('text-gray-300', 'hover:text-white', 'hover:bg-gray-700');
+                    activeButton.classList.add('bg-amber-500', 'text-white');
+                }
+            }
+        });
     </script>
 </section>
