@@ -2,9 +2,9 @@
     <section class="pb-16">
         <div class="container mx-auto">
             <div class="mb-10 flex gap-x-2 text-sm font-semibold">
-                <a href="{{ url('/') }}" class="opacity-60">Home</a>
+                <a href="{{ route('home') }}" class="opacity-60">Home</a>
                 <span class="opacity-30">/</span>
-                <a title="{{ $post->slug }}" href="{{ url('/'.$post->slug) }}" class="hover:text-primary-600 max-w-2xl truncate font-medium transition-all duration-300">
+                <a title="{{ $post->slug }}" href="{{ route('post.show', $post->slug) }}" class="hover:text-primary-600 max-w-2xl truncate font-medium transition-all duration-300">
                     {{ $post->title }}
                 </a>
             </div>
@@ -21,7 +21,7 @@
                         <div>
                             <div class="flex flex-col justify-end">
                                 <div class="mb-6 w-full overflow-hidden rounded bg-slate-200">
-                                    <img class="w-full h-auto aspect-video object-cover" src="{{ $post->featurePhoto  }}" alt="{{ $post->photo_alt_text }}">
+                                    <img class="w-full h-auto aspect-video object-cover" loading="lazy" decoding="async" src="{{ $post->featurePhoto }}" alt="{{ $post->photo_alt_text }}">
                                 </div>
                                 <div class="mb-6">
                                     <h1 class="mb-6 text-4xl font-semibold">
@@ -30,7 +30,7 @@
                                     <p>{{ $post->sub_title }}</p>
                                     <div class="mt-2">
                                         @foreach ($post->categories as $category)
-                                        <a href="{{ url('/categories/'.$category->slug) }}">
+                                        <a href="{{ url('/category/'.$category->slug) }}">
                                             <span class="bg-primary-200 text-primary-800 mr-2 inline-flex rounded-full px-2 py-1 text-xs font-semibold">{{ $category->name }}
                                             </span>
                                         </a>
@@ -40,7 +40,7 @@
                                 <div class="mb-5 flex items-center justify-between gap-x-3 py-5">
                                     <div>
                                         <div class="flex items-center gap-4">
-                                            <img class="h-14 w-14 overflow-hidden rounded-full border-4 border-white bg-zinc-300 object-cover text-[0] ring-1 ring-slate-300" src="{{ $post->user->avatar }}" alt="{{ $post->user->name() }}">
+                                            <img class="h-14 w-14 overflow-hidden rounded-full border-4 border-white bg-zinc-300 object-cover text-[0] ring-1 ring-slate-300" loading="lazy" decoding="async" src="{{ $post->user->avatar }}" alt="{{ $post->user->name() }}">
                                             <div>
                                                 <span title="{{ $post->user->name() }}" class="block max-w-[150px] overflow-hidden text-ellipsis whitespace-nowrap font-semibold">{{ $post->user->name() }}</span>
                                                 <span class="block whitespace-nowrap text-sm font-medium font-semibold text-zinc-600">
@@ -162,9 +162,13 @@
                         </div>
                     </div>
                     <div>
-                        <!-- Ads Section -->
-                        <div class="sticky top-24 flex h-[600px] w-[160px] items-center justify-center overflow-hidden rounded bg-slate-200 font-medium text-slate-500/20">
-                            <span>ADS</span>
+                        <!-- Popular Posts Section -->
+                        <div class="sticky top-24 space-y-6">
+                            <!-- Ads Section -->
+                            <div class="flex h-[600px] w-[160px] items-center justify-center overflow-hidden rounded bg-slate-200 font-medium text-slate-500/20">
+                                <span>ADS</span>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -178,16 +182,47 @@
             <div>
                 <div>
                     <div class="relative mb-6 flex items-center gap-x-8">
-                        <h2 class="whitespace-nowrap text-xl font-semibold">
+                        <h3 class="whitespace-nowrap text-xl font-semibold">
                             <span class="text-primary font-bold">#</span> Related Posts
-                        </h2>
+                        </h3>
                         <div class="flex w-full items-center">
                             <span class="h-0.5 w-full rounded-full bg-slate-200"></span>
                         </div>
                     </div>
                     <div class="grid md:grid-cols-3 sm:grid-cols-1 gap-x-12 gap-y-10">
-                        @forelse($post->relatedPosts() as $post)
-                        <x-blog-card :post="$post" />
+                        @forelse($post->relatedPosts() as $relatedPost)
+                        <div class="group">
+                            <a href="{{ route('post.show', $relatedPost->slug) }}" class="block overflow-hidden rounded-lg border border-slate-200 transition-all duration-300 hover:shadow-lg">
+                                <div class="aspect-video overflow-hidden">
+                                    <img src="{{ $relatedPost->featurePhoto }}" 
+                                         alt="{{ $relatedPost->photo_alt_text }}"
+                                         class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                         loading="lazy" decoding="async">
+                                </div>
+                                <div class="p-4">
+                                    <div class="mb-2 flex flex-wrap gap-2">
+                                        @foreach($relatedPost->categories as $category)
+                                        <a href="{{ url('/categories/'.$category->slug) }}" 
+                                           class="text-xs font-medium text-primary-600 hover:text-primary-800">
+                                            #{{ $category->name }}
+                                        </a>
+                                        @endforeach
+                                    </div>
+                                    <h5 class="mb-2 text-lg font-semibold group-hover:text-primary-600">
+                                        {{ $relatedPost->title }}
+                                    </h5>
+                                    <p class="text-sm text-slate-600 line-clamp-2">
+                                        {{ $relatedPost->sub_title }}
+                                    </p>
+                                    <div class="mt-4 flex items-center justify-between">
+                                        <span class="text-xs text-slate-500">
+                                            {{ $relatedPost->formattedPublishedDate() }}
+                                        </span>
+                                        <span class="text-xs font-medium text-primary-600">Read More →</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                         @empty
                         <div class="col-span-3">
                             <p class="text-center text-xl font-semibold text-gray-300">No related posts found.</p>

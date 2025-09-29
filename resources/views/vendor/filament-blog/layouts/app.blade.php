@@ -7,6 +7,21 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="canonical" href="{{ url()->current() }}" />
     <link rel="icon" href="{{ $setting?->faviconImage }}" type="image/x-icon" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="{{ $setting?->title ?? config('app.name') }}">
+    <meta property="og:description" content="{{ $setting?->description ?? '' }}">
+    <meta property="og:image" content="{{ $setting?->logoImage ?? '' }}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ url()->current() }}">
+    <meta name="twitter:title" content="{{ $setting?->title ?? config('app.name') }}">
+    <meta name="twitter:description" content="{{ $setting?->description ?? '' }}">
+    <meta name="twitter:image" content="{{ $setting?->logoImage ?? '' }}">
+    
     {!! \Firefly\FilamentBlog\Facades\SEOMeta::generate() !!}
     {!! $setting?->google_console_code !!}
     {!! $setting?->google_analytic_code !!}
@@ -16,14 +31,13 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="{{ asset('build/assets/popup-modal-BhG6C3tA.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('build/assets/popup-modal-B2wiebwV.css') }}">
     <script>
         tailwind.config = {
             theme: {
@@ -68,11 +82,15 @@
             }
         }
     </script>
+    <!-- Critical CSS -->
     <style>
+        /* Inline critical styles for faster initial render */
         body {
             font-family: "Poppins", serif;
             font-weight: 400;
             font-style: normal;
+            opacity: 1;
+            visibility: visible;
         }
 
         .line-clamp-2 {
@@ -81,15 +99,29 @@
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 2;
         }
+
+        /* First contentful paint optimization */
+        .container { width: 100%; margin-left: auto; margin-right: auto; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .font-semibold { font-weight: 600; }
+        .mb-6 { margin-bottom: 1.5rem; }
     </style>
-    <style>
+    
+    <!-- Non-critical CSS -->
+    <style media="print" onload="this.media='all'">
         /* Blog Posts */
+        /* Ensure proper heading hierarchy in article content */
         article h1 {
+            display: none; /* Hide any H1s in content since we already have a page H1 */
+        }
+        
+        article h2 {
             line-height: 1.2;
-            font-size: 2rem;
+            font-size: 1.75rem;
             color: #424242;
-            font-weight: 900;
-            padding-bottom: 20px;
+            font-weight: 800;
+            padding-bottom: 15px;
+            margin-top: 2rem;
         }
 
         article h2 {
@@ -271,11 +303,29 @@
             </div>
         </div>
     </div>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- Load reCAPTCHA only when needed -->
     <script>
+        function loadRecaptcha() {
+            if (!window.grecaptcha) {
+                const script = document.createElement('script');
+                script.src = 'https://www.google.com/recaptcha/api.js';
+                script.async = true;
+                script.defer = true;
+                document.head.appendChild(script);
+            }
+        }
+
         function onSubmit(token) {
             document.getElementById("comment-box").submit();
         }
+
+        // Load reCAPTCHA when user interacts with the page
+        document.addEventListener('DOMContentLoaded', function() {
+            const commentForm = document.getElementById('comment-box');
+            if (commentForm) {
+                commentForm.addEventListener('focusin', loadRecaptcha);
+            }
+        });
     </script>
     <x-popup-modal />
 </body>

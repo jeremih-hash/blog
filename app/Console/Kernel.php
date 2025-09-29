@@ -17,10 +17,21 @@ class Kernel extends ConsoleKernel
         //         ->everyThirtyMinutes()
         //         ->withoutOverlapping();
                 
-        // Generate sitemap daily at midnight
+        // Generate sitemap every 6 hours to ensure fresh content is crawled
         $schedule->command('sitemap:generate')
-                ->daily()
-                ->withoutOverlapping();
+                ->everyFourHours()
+                ->withoutOverlapping()
+                ->onSuccess(function () {
+                    // Ping search engines after successful generation
+                    $sitemapUrl = url('/sitemap.xml');
+                    
+                    // Ping Google
+                    file_get_contents('https://www.google.com/ping?sitemap=' . urlencode($sitemapUrl));
+                    
+                    // Ping Bing
+                    file_get_contents('https://www.bing.com/ping?sitemap=' . urlencode($sitemapUrl));
+                })
+                ->emailOutputOnFailure(config('mail.admin_email'));
     }
 
     /**

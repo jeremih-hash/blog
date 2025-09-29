@@ -54,6 +54,28 @@ class SitemapController extends Controller
                 ->setPriority(0.9)
         );
 
+        // Add static pages
+        $staticPages = [
+            '/football-predictions' => 0.9,
+            '/soccer-betting-tips' => 0.9,
+            '/vip-soccer-betting-tips' => 0.8
+        ];
+
+        foreach ($staticPages as $path => $priority) {
+            $sitemap->add(
+                Url::create(url($path))
+                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
+                    ->setPriority($priority)
+            );
+        }
+
+        // Add search page
+        $sitemap->add(
+            Url::create(url('/search'))
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
+                ->setPriority(0.6)
+        );
+
         return $sitemap->toResponse(request());
     }
 }

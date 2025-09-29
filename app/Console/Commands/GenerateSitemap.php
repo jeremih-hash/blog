@@ -58,6 +58,22 @@ class GenerateSitemap extends Command
                 ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
                 ->setPriority(0.9)
         );
+
+        // Add static pages
+        $staticPages = [
+            '/football-predictions' => 0.9,
+            '/soccer-betting-tips' => 0.9,
+            '/vip-soccer-betting-tips' => 0.8,
+            '/search' => 0.6
+        ];
+
+        foreach ($staticPages as $path => $priority) {
+            $sitemap->add(
+                Url::create(url($path))
+                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_DAILY)
+                    ->setPriority($priority)
+            );
+        }
         
         // Add all posts
         $this->info('Adding posts to main sitemap...');
@@ -79,7 +95,7 @@ class GenerateSitemap extends Command
         
         Category::all()->each(function (Category $category) use ($sitemap) {
             $sitemap->add(
-                Url::create(url('/categories/' . $category->slug))
+                Url::create(url('/category/' . $category->slug))
                     ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
                     ->setPriority(0.7)
             );
@@ -109,7 +125,7 @@ class GenerateSitemap extends Command
         // Add all tags to the sitemap
         foreach ($tags as $tag) {
             $sitemap->add(
-                Url::create(url('/tags/' . $tag->slug))
+                Url::create(url('/tag/' . $tag->slug))
                     ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
                     ->setPriority(0.6)
             );
