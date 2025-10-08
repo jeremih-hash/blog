@@ -328,6 +328,118 @@
         });
     </script>
     <x-popup-modal />
+    
+    <!-- Mozzart Promotion Banner -->
+    <div x-data="{ 
+        country: 'KE',
+        currentBannerIndex: 0,
+        isLoaded: false,
+        countryLinks: {
+            'KE': {
+                casino: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K62bnhOaaLAUmNd7ZgqdRLk/1/',
+                betting: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K622a5QkwDt8GNd7ZgqdRLk/1/',
+                registration: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K62u08qNo8obWNd7ZgqdRLk/1/'
+            },
+            'NG': {
+                casino: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K5qkvbhkiKqDGNd7ZgqdRLk/1/',
+                betting: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7P2s46Cv8UUWNd7ZgqdRLk/1/',
+                registration: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K5utv7iXV6HvmNd7ZgqdRLk/1/'
+            }
+        },
+        banners: {
+            'KE': [
+                {
+                    type: 'casino',
+                    title: 'Spin & Win Up to Ksh 2M!',
+                    description: 'Step up your spins — win up to Ksh 2,000,000 at Mozzart Casino! Get in on the action — Ksh 10 stake is all you need to start winning at Mozzart Casino!'
+                },
+                {
+                    type: 'betting',
+                    title: '50% Free Bet Up To KES 2,500 | Join & Get Up to 50 Free Spins',
+                    description: 'Register Now and Claim Your Free Bet & Aviator Spins. Sign up now, play your first bet & claim your 50% bonus + Free Spins.'
+                },
+                {
+                    type: 'registration',
+                    title: 'Register with MozzartBet - Start Betting Today!',
+                    description: 'Create your account easily and enjoy a variety of sports betting options with competitive odds.'
+                }
+            ],
+            'NG': [
+                {
+                    type: 'casino',
+                    title: 'Spin & Win Up to ₦2M!',
+                    description: 'Step up your spins — win up to ₦2,000,000 at Mozzart Casino! Get in on the action — ₦10 stake is all you need to start winning at Mozzart Casino!'
+                },
+                {
+                    type: 'betting',
+                    title: '150% Free Bet Up To ₦500,000 | Join & Get Up to 50 Free Spins',
+                    description: 'Register Now and Claim Your Free Bet & Aviator Spins. Sign up now, play your first bet & claim your 150% bonus + Free Spins.'
+                },
+                {
+                    type: 'registration',
+                    title: 'Register with MozzartBet Nigeria - Start Betting Today!',
+                    description: 'Create your account easily and enjoy the best odds and biggest bonuses in Nigeria!'
+                }
+            ]
+        },
+        init() {
+            // Get user's country code using geolocation service
+            fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+                    // Check if we have content for this country
+                    if (this.countryLinks[data.country_code]) {
+                        this.country = data.country_code;
+                    }
+                })
+                .catch(() => {
+                    // Default to Kenya if geolocation fails
+                    this.country = 'KE';
+                })
+                .finally(() => {
+                    // Start with random banner
+                    this.currentBannerIndex = Math.floor(Math.random() * this.banners[this.country].length);
+                    this.isLoaded = true;
+                    
+                    // Rotate banners every 30 seconds
+                    setInterval(() => {
+                        this.currentBannerIndex = (this.currentBannerIndex + 1) % this.banners[this.country].length;
+                    }, 30000);
+                });
+        }
+    }" 
+    class="fixed bottom-0 left-0 w-full z-50" 
+    style="background-image: linear-gradient(to right, rgb(43, 37, 109), rgb(0, 0, 0)); color: rgb(255, 255, 255);">
+        <template x-for="(banner, index) in banners[country]" :key="index">
+            <a :href="countryLinks[country][banner.type]" 
+               x-show="isLoaded && currentBannerIndex === index"
+               x-transition:enter="transition ease-out duration-300"
+               x-transition:enter-start="opacity-0 transform translate-y-4"
+               x-transition:enter-end="opacity-100 transform translate-y-0"
+               x-transition:leave="transition ease-in duration-300"
+               x-transition:leave-start="opacity-100 transform translate-y-0"
+               x-transition:leave-end="opacity-0 transform translate-y-4"
+               target="_blank" 
+               rel="noopener noreferrer sponsored" 
+               class="flex flex-row items-center justify-between gap-4 px-4 md:px-10 py-3 max-w-screen-xl mx-auto">
+                <img alt="mozzart" 
+                     loading="lazy" 
+                     width="100" 
+                     height="100" 
+                     decoding="async" 
+                     class="object-contain w-[50px] md:w-[100px] md:h-[50px] h-[35px]"
+                     src="{{ asset('images/mozzartbet.png') }}">
+                <div class="text-center flex-1">
+                    <p class="font-semibold text-white text-xs md:text-lg animate-bounce leading-snug" x-text="banner.title"></p>
+                    <p class="text-xs lg:text-sm text-white/80 hidden lg:inline" x-text="banner.description"></p>
+                </div>
+                <div class="md:mt-2 md:mt-0 bg-[#ffb400] text-xs md:text-sm font-semibold rounded-full px-4 py-1 md:py-2 text-center hover:bg-secondary hover:text-white whitespace-nowrap"
+                     style="color: rgb(43, 37, 109);">
+                    Register
+                </div>
+            </a>
+        </template>
+    </div>
 </body>
 
 </html>

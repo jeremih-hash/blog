@@ -35,4 +35,8 @@ return [
         ],
     ],
 
+    'mozzart' => [
+        'affiliate_link' => env('MOZZART_AFFILIATE_LINK', 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7UOsjNOfgKeWNd7ZgqdRLk/1/'),
+    ],
+
 ];

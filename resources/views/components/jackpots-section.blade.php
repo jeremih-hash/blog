@@ -1,5 +1,5 @@
 <!-- Bookmaker-specific Jackpot Section -->
-<section class="py-16 bg-gray-900 w-full" id="bookmaker-jackpots">
+<section class="pt-16 bg-gray-900" id="bookmaker-jackpots">
     <div class="container mx-auto px-4">
         <div class="max-w-6xl mx-auto">
             <!-- Section Header -->
@@ -23,7 +23,7 @@
             
             <!-- Jackpot Tab Content -->
             <div id="jackpots-tab" class="tab-content">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pb-8">
                     <!-- Sportpesa Mega Jackpot Card -->
                     <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700 transition-all duration-300 hover:shadow-amber-500/20 hover:transform hover:scale-[1.02]">
                         <div class="p-6">
@@ -156,7 +156,7 @@
             
             <!-- Popular Leagues Tab Content -->
             <div id="leagues-tab" class="tab-content hidden">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pb-8">
                                         <!-- Premier League -->
                     <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden border border-gray-700 transition-all duration-300 hover:shadow-amber-500/20 hover:transform hover:scale-[1.02]">
                         <div class="bg-amber-500 p-4">
@@ -338,99 +338,178 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Bottom CTA Section -->
-            <div class="mt-16 bg-gray-800/50 rounded-xl p-8 text-center max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold text-white mb-4">Kenya's #1 Football Betting Tips Platform</h2>
-                
-                <p class="text-gray-300 mb-6">
-                    Top Football Prediction offers Free Football Betting Tips and Daily Football Predictions for 
-                    Kenyan bettors. Download our Sure Tips Android app for complete jackpot access and 
-                    free betting tips, updated daily before noon.
-                </p>
-                
-                <p class="text-gray-300 mb-8">
-                    For best results, be selective with your bets rather than wagering on all tips. Multi-bets 
-                    with carefully chosen games have higher winning potential. Our expert predictions are 
-                    designed to help you achieve long-term profits with consistent results.
-                </p>
-                
-                <a href="https://play.google.com/store/apps/details?id=com.topfootballapp.mobile" 
-                   class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-amber-500 to-yellow-600 
-                          text-white font-medium rounded-lg hover:from-amber-600 hover:to-yellow-700 
-                          transition-all duration-300">
-                    Download Our Free Betting Tips App
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
-
-            <!-- Casino Bonus Cards -->
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-                <!-- 22Bet Casino Card -->
-                <div class="bg-[#093a3f] rounded-xl overflow-hidden shadow-lg h-[280px] flex flex-col">
-                    <div class="p-6 flex flex-col h-full">
-                        <div class="flex-none">
-                            <img src="{{ asset('images/22bet.png') }}" alt="22Bet Logo" class="h-12 mb-4">
-                            <h3 class="text-xl font-bold text-white mb-2">Casino Bonus up to 35000 Kes</h3>
-                            <p class="text-gray-300 text-sm line-clamp-2">Get up to KES 35,000 in Casino Bonus on your First Deposit!</p>
-                        </div>
-                        <div class="flex-grow"></div>
-                        <a href="#" class="block text-center py-2 px-4 bg-white text-[#093a3f] rounded-lg font-medium transition-all duration-300 hover:bg-gray-100 mt-4">
-                            Visit Site
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 22Bet Sports Card -->
-                <div class="bg-[#093a3f] rounded-xl overflow-hidden shadow-lg h-[280px] flex flex-col">
-                    <div class="p-6 flex flex-col h-full">
-                        <div class="flex-none">
-                            <img src="{{ asset('images/22bet.png') }}" alt="22Bet Logo" class="h-12 mb-4">
-                            <h3 class="text-xl font-bold text-white mb-2">Win up to KES 35000</h3>
-                            <p class="text-gray-300 text-sm line-clamp-2">Register and get a bonus of up to 19000 KES for sports betting or up to 35000 KES for casino games.</p>
-                        </div>
-                        <div class="flex-grow"></div>
-                        <a href="#" class="block text-center py-2 px-4 bg-white text-[#093a3f] rounded-lg font-medium transition-all duration-300 hover:bg-gray-100 mt-4">
-                            Visit Site
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Mozzart Casino Card -->
-                <div class="bg-[#2b256d] rounded-xl overflow-hidden shadow-lg h-[280px] flex flex-col">
-                    <div class="p-6 flex flex-col h-full">
-                        <div class="flex-none">
-                            <img src="{{ asset('images/mozzart.png') }}" alt="Mozzart Logo" class="h-12 mb-4">
-                            <h3 class="text-xl font-bold text-white mb-2">Spin & Win Up to Ksh 2M!</h3>
-                            <p class="text-gray-300 text-sm line-clamp-2">Step up your spins — win up to Ksh 2,000,000 at Mozzart Casino! Get in on the action with just Ksh 10 stake.</p>
-                        </div>
-                        <div class="flex-grow"></div>
-                        <a href="#" class="block text-center py-2 px-4 bg-white text-[#2b256d] rounded-lg font-medium transition-all duration-300 hover:bg-gray-100 mt-4">
-                            Visit Site
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Mozzart Bet Card -->
-                <div class="bg-[#2b256d] rounded-xl overflow-hidden shadow-lg h-[280px] flex flex-col">
-                    <div class="p-6 flex flex-col h-full">
-                        <div class="flex-none">
-                            <img src="{{ asset('images/mozzart.png') }}" alt="Mozzart Logo" class="h-12 mb-4">
-                            <h3 class="text-xl font-bold text-white mb-2">50% Free Bet Up To KES 2,500</h3>
-                            <p class="text-gray-300 text-sm line-clamp-2">Register Now and Claim Your Free Bet & Aviator Spins. Sign up now for 50% bonus + Free Spins.</p>
-                        </div>
-                        <div class="flex-grow"></div>
-                        <a href="#" class="block text-center py-2 px-4 bg-white text-[#2b256d] rounded-lg font-medium transition-all duration-300 hover:bg-gray-100 mt-4">
-                            Visit Site
-                        </a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
-    
+</section>
+
+<!-- Casino Bonus Section -->
+<section class="bg-gray-50 py-4">
+    <!-- Casino Bonus Cards Container -->
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap w-full gap-6 p-4 justify-center">
+                <!-- Mozzart Casino Card -->
+                <a href="https://record.mozzartaffiliates.com/_3cPVmCfi3K62bnhOaaLAUmNd7ZgqdRLk/1/" 
+                   data-card-type="casino"
+                   x-data="{ 
+                       country: 'KE',
+                       links: {
+                           'AL': {
+                               betting: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7YGgllr3Vm5GNd7ZgqdRLk/1/',
+                               casino: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K48TL4kmJ7MEGNd7ZgqdRLk/1/',
+                               registration: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K4B0WjZNehKqWNd7ZgqdRLk/1/'
+                           },
+                           'HR': {
+                               registration: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7Qu3xmF3mH2WNd7ZgqdRLk/1/'
+                           },
+                           'DE': {
+                               homepage: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7kvWkMXluei2Nd7ZgqdRLk/1/'
+                           },
+                           'AT': {
+                               registration: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7iXFlEjLmlfWNd7ZgqdRLk/1/'
+                           },
+                           'MK': {
+                               registration: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7gXusHI1eWymNd7ZgqdRLk/1/'
+                           },
+                           'KE': 'https://record.mozzartaffiliates.com/_3cPVmCfi3K62bnhOaaLAUmNd7ZgqdRLk/1/',
+                           'NG': 'https://record.mozzartaffiliates.com/_3cPVmCfi3K5qkvbhkiKqDGNd7ZgqdRLk/1/'
+                       }
+                   }"
+                   x-init="fetch('https://ipapi.co/json/')
+                          .then(response => response.json())
+                          .then(data => {
+                              if (links[data.country_code]) {
+                                  country = data.country_code;
+                                  const cardType = $el.dataset.cardType;
+                                  
+                                  // Select appropriate link based on country and card type
+                                  if (country === 'AL') {
+                                      $el.href = cardType === 'casino' ? links[country].casino : links[country].betting;
+                                  } else if (country === 'HR' || country === 'AT' || country === 'MK') {
+                                      $el.href = links[country].registration;
+                                  } else if (country === 'DE') {
+                                      $el.href = links[country].homepage;
+                                  }
+                              }
+                          })"
+                   target="_blank" rel="noopener noreferrer sponsored" 
+                   class="rounded-lg hover:shadow-lg shadow transition-all duration-300 w-full md:max-w-[350px] lg:max-w-[290px] xl:max-w-[350px]"
+                   style="background-image: linear-gradient(to right bottom, rgb(43, 37, 109), rgb(43, 37, 109), rgb(0, 0, 0)); color: rgb(255, 255, 255);">
+                    <div class="p-4 flex flex-col justify-between h-full">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="relative flex size-8 shrink-0 overflow-hidden rounded-full h-20 w-20">
+                                <img alt="mozzart" src="{{ asset('images/mozzart.png') }}">
+                            </span>
+                            <div>
+                                <p class="font-semibold text-base" x-text="
+                                    country === 'NG' ? 'Spin & Win Up to ₦2M!' :
+                                    country === 'AL' ? 'Mozzart Casino Albania' :
+                                    country === 'HR' ? 'Join Mozzart Croatia Today!' :
+                                    country === 'DE' ? 'Welcome to Mozzart Germany' :
+                                    country === 'AT' ? 'Join Mozzart Austria' :
+                                    country === 'MK' ? 'Join Mozzart Macedonia' :
+                                    'Spin & Win Up to Ksh 2M!'
+                                "></p>
+                            </div>
+                        </div>
+                        <div class="flex-1 mb-4">
+                            <p class="text-sm mt-1" x-text="
+                                country === 'NG' ? 'Step up your spins — win up to ₦2,000,000 at Mozzart Casino! Get in on the action — ₦10 stake is all you need to start winning at Mozzart Casino!' :
+                                country === 'AL' ? 'Join the best casino in Albania. Register now and claim your welcome bonus!' :
+                                country === 'HR' ? 'Register now and enjoy the best betting experience in Croatia.' :
+                                country === 'DE' ? 'Your premier destination for sports betting and casino games in Germany.' :
+                                country === 'AT' ? 'Register now and start your betting journey with Mozzart Austria.' :
+                                country === 'MK' ? 'Sign up with the leading betting platform in Macedonia.' :
+                                'Step up your spins — win up to Ksh 2,000,000 at Mozzart Casino! Get in on the action — Ksh 10 stake is all you need to start winning at Mozzart Casino!'
+                            "></p>
+                        </div>
+                        <div class="mt-auto bg-white font-semibold rounded-md px-3 py-2 text-sm text-center hover:bg-secondary hover:text-white"
+                             style="color: rgb(43, 37, 109);">Visit Site</div>
+                    </div>
+                </a>
+
+                <!-- Mozzart Bet Card -->
+                <a href="https://record.mozzartaffiliates.com/_3cPVmCfi3K622a5QkwDt8GNd7ZgqdRLk/1/" 
+                   data-card-type="betting"
+                   x-data="{ 
+                       country: 'KE',
+                       links: {
+                           'AL': {
+                               betting: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7YGgllr3Vm5GNd7ZgqdRLk/1/',
+                               casino: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K48TL4kmJ7MEGNd7ZgqdRLk/1/',
+                               registration: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K4B0WjZNehKqWNd7ZgqdRLk/1/'
+                           },
+                           'HR': {
+                               registration: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7Qu3xmF3mH2WNd7ZgqdRLk/1/'
+                           },
+                           'DE': {
+                               homepage: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7kvWkMXluei2Nd7ZgqdRLk/1/'
+                           },
+                           'AT': {
+                               registration: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7iXFlEjLmlfWNd7ZgqdRLk/1/'
+                           },
+                           'MK': {
+                               registration: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7gXusHI1eWymNd7ZgqdRLk/1/'
+                           },
+                           'KE': 'https://record.mozzartaffiliates.com/_3cPVmCfi3K622a5QkwDt8GNd7ZgqdRLk/1/',
+                           'NG': 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7P2s46Cv8UUWNd7ZgqdRLk/1/'
+                       }
+                   }"
+                   x-init="fetch('https://ipapi.co/json/')
+                          .then(response => response.json())
+                          .then(data => {
+                              if (links[data.country_code]) {
+                                  country = data.country_code;
+                                  const cardType = $el.dataset.cardType;
+                                  
+                                  // Select appropriate link based on country and card type
+                                  if (country === 'AL') {
+                                      $el.href = cardType === 'casino' ? links[country].casino : links[country].betting;
+                                  } else if (country === 'HR' || country === 'AT' || country === 'MK') {
+                                      $el.href = links[country].registration;
+                                  } else if (country === 'DE') {
+                                      $el.href = links[country].homepage;
+                                  }
+                              }
+                          })"
+                   target="_blank" rel="noopener noreferrer sponsored" 
+                   class="rounded-lg hover:shadow-lg shadow transition-all duration-300 w-full md:max-w-[350px] lg:max-w-[290px] xl:max-w-[350px]"
+                   style="background-image: linear-gradient(to right bottom, rgb(43, 37, 109), rgb(43, 37, 109), rgb(0, 0, 0)); color: rgb(255, 255, 255);">
+                    <div class="p-4 flex flex-col justify-between h-full">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="relative flex size-8 shrink-0 overflow-hidden rounded-full h-20 w-20">
+                                <img alt="mozzart" src="{{ asset('images/mozzart.png') }}">
+                            </span>
+                            <div>
+                                <p class="font-semibold text-base" x-text="
+                                    country === 'NG' ? '150% Free Bet Up To ₦500,000 | Join & Get Up to 50 Free Spins' :
+                                    country === 'AL' ? 'Mozzart Sports Betting Albania' :
+                                    country === 'HR' ? 'Join Mozzart Croatia Today!' :
+                                    country === 'DE' ? 'Welcome to Mozzart Germany' :
+                                    country === 'AT' ? 'Join Mozzart Austria' :
+                                    country === 'MK' ? 'Join Mozzart Macedonia' :
+                                    '50% Free Bet Up To KES 2,500 | Join & Get Up to 50 Free Spins'
+                                "></p>
+                            </div>
+                        </div>
+                        <div class="flex-1 mb-4">
+                            <p class="text-sm mt-1" x-text="
+                                country === 'NG' ? 'Register Now and Claim Your Free Bet & Aviator Spins. Sign up now, play your first bet & claim your 150% bonus + Free Spins.' :
+                                country === 'AL' ? 'Best odds and sports betting options in Albania. Join now and start winning!' :
+                                country === 'HR' ? 'Register now and enjoy the best betting experience in Croatia.' :
+                                country === 'DE' ? 'Your premier destination for sports betting and casino games in Germany.' :
+                                country === 'AT' ? 'Register now and start your betting journey with Mozzart Austria.' :
+                                country === 'MK' ? 'Sign up with the leading betting platform in Macedonia.' :
+                                'Register Now and Claim Your Free Bet & Aviator Spins. Sign up now, play your first bet & claim your 50% bonus + Free Spins.'
+                            "></p>
+                        </div>
+                        <div class="mt-auto bg-white font-semibold rounded-md px-3 py-2 text-sm text-center hover:bg-secondary hover:text-white"
+                             style="color: rgb(43, 37, 109);">Visit Site</div>
+                    </div>
+                </a>
+        </div>
+    </div>
+</section>
+
     <!-- Tab Switching JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -461,4 +540,3 @@
             }
         });
     </script>
-</section>

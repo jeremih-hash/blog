@@ -54,7 +54,7 @@
                                         
                                         {!! $post->body !!}
                                     </article>
-                                    
+
                                     <style>
                                         /* Regular links */
                                         .post-content a {
@@ -164,9 +164,113 @@
                     <div>
                         <!-- Popular Posts Section -->
                         <div class="sticky top-24 space-y-6">
-                            <!-- Ads Section -->
-                            <div class="flex h-[600px] w-[160px] items-center justify-center overflow-hidden rounded bg-slate-200 font-medium text-slate-500/20">
-                                <span>ADS</span>
+                            <!-- Mozzart Banner -->
+                            <div x-data="{ 
+                                country: 'KE',
+                                links: {
+                                    'AL': {
+                                        registration: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K4B0WjZNehKqWNd7ZgqdRLk/1/'
+                                    },
+                                    'HR': {
+                                        registration: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7Qu3xmF3mH2WNd7ZgqdRLk/1/'
+                                    },
+                                    'DE': {
+                                        homepage: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7kvWkMXluei2Nd7ZgqdRLk/1/'
+                                    },
+                                    'AT': {
+                                        registration: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7iXFlEjLmlfWNd7ZgqdRLk/1/'
+                                    },
+                                    'MK': {
+                                        registration: 'https://record.mozzartaffiliates.com/_3cPVmCfi3K7gXusHI1eWymNd7ZgqdRLk/1/'
+                                    },
+                                    'KE': 'https://record.mozzartaffiliates.com/_3cPVmCfi3K62u08qNo8obWNd7ZgqdRLk/1/',
+                                    'NG': 'https://record.mozzartaffiliates.com/_3cPVmCfi3K5utv7iXV6HvmNd7ZgqdRLk/1/'
+                                },
+                                isLoaded: false,
+                                init() {
+                                    fetch('https://ipapi.co/json/')
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            if (this.links[data.country_code]) {
+                                                this.country = data.country_code;
+                                            }
+                                        })
+                                        .catch(() => {
+                                            this.country = 'KE';
+                                        })
+                                        .finally(() => {
+                                            this.isLoaded = true;
+                                        });
+                                }
+                            }"
+                            x-show="isLoaded"
+                            class="w-[160px] h-[600px] rounded-lg overflow-hidden"
+                            style="background-image: linear-gradient(to bottom, rgb(43, 37, 109), rgb(0, 0, 0));">
+                                <a :href="
+                                    country === 'AL' ? links[country].registration :
+                                    country === 'HR' ? links[country].registration :
+                                    country === 'DE' ? links[country].homepage :
+                                    country === 'AT' ? links[country].registration :
+                                    country === 'MK' ? links[country].registration :
+                                    links[country]
+                                "
+                                target="_blank" 
+                                rel="noopener noreferrer sponsored" 
+                                class="flex flex-col items-center h-full text-center">
+                                    <!-- Top Section with Logo -->
+                                    <div class="w-full p-4 pb-2 text-center">
+                                        <img alt="mozzart" 
+                                             loading="lazy" 
+                                             width="50" 
+                                             height="50"
+                                             decoding="async" 
+                                             class="object-contain w-[50px] h-[50px] mx-auto mb-3"
+                                             src="{{ asset('images/mozzartbet.png') }}">
+                                    </div>
+
+                                    <!-- Main Content Section -->
+                                    <div class="flex-1 w-full px-3 py-2 text-center">
+                                        <p class="font-bold text-white text-base mb-2" x-text="
+                                            country === 'NG' ? 'Register with MozzartBet Nigeria' :
+                                            country === 'AL' ? 'Register with MozzartBet Albania' :
+                                            country === 'HR' ? 'Register with MozzartBet Croatia' :
+                                            country === 'DE' ? 'Register with MozzartBet Germany' :
+                                            country === 'AT' ? 'Register with MozzartBet Austria' :
+                                            country === 'MK' ? 'Register with MozzartBet Macedonia' :
+                                            'Register with MozzartBet Kenya'
+                                        "></p>
+                                        
+                                        <p class="text-white text-sm mb-3">Start Betting Today!</p>
+                                        
+                                        <p class="text-white/80 text-xs leading-relaxed mb-4">Create your account easily and enjoy a variety of sports betting options with competitive odds.</p>
+
+                                        <div class="text-[#ffb400] font-bold text-sm mb-2" x-text="
+                                            country === 'NG' ? '₦500,000 Welcome' :
+                                            country === 'AL' ? 'Welcome Bonus' :
+                                            country === 'HR' ? 'Welcome Bonus' :
+                                            country === 'DE' ? 'Welcome Bonus' :
+                                            country === 'AT' ? 'Welcome Bonus' :
+                                            country === 'MK' ? 'Welcome Bonus' :
+                                            'KES 2,500 Welcome'
+                                        "></div>
+                                        <div class="text-[#ffb400] font-bold text-sm">
+                                            Bonus
+                                        </div>
+                                    </div>
+
+                                    <!-- Bottom Section -->
+                                    <div class="w-full px-4 pb-4">
+                                        <div class="bg-[#ffb400] text-sm font-bold rounded-lg py-2 hover:bg-white transition-colors duration-300"
+                                             style="color: rgb(43, 37, 109);">
+                                            Register Now
+                                        </div>
+                                        
+                                        <p class="text-[10px] text-center mt-2 text-white/60">
+                                            T&Cs Apply • 18+ Only
+                                        </p>
+                                    </div>
+                                    </div>
+                                </a>
                             </div>
                             
                         </div>
