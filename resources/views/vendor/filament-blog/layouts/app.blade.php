@@ -25,7 +25,7 @@
     {!! \Firefly\FilamentBlog\Facades\SEOMeta::generate() !!}
     {!! $setting?->google_console_code !!}
     {!! $setting?->google_analytic_code !!}
-    {!! $setting?->google_adsense_code !!}
+    {!! $setting?->google_adsense_code !!} 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9706156005053424" crossorigin="anonymous"></script>
 
     <!-- Fonts -->
