@@ -26,6 +26,10 @@ Route::get('/privacy-policy', function () {
     return view('privacy-policy');
 })->name('privacy.policy');
 
+Route::get('/terms-of-use', function () {
+    return view('terms-of-use');
+})->name('terms.of.use');
+
 Route::post('/subscribe', [SubscribeController::class, 'store'])->name('subscribe');
 
 Route::post('/track-app-click', function (Request $request) {
@@ -42,6 +46,6 @@ Route::post('/track-app-click', function (Request $request) {
 Route::get('/{post:slug}', function ($post) {
     $shareButton = ShareSnippet::where('active', true)->first();
     return view('vendor.filament-blog.blogs.show', compact('post', 'shareButton'));
-})->name('post.show')->where('post', '^(?!privacy-policy|football-predictions|soccer-betting-tips|vip-soccer-betting-tips).+$');
+})->name('post.show')->where('post', '^(?!privacy-policy|terms-of-use|football-predictions|soccer-betting-tips|vip-soccer-betting-tips).+$');
 
 Route::get('/sitemap.xml', [SitemapController::class, 'index']);
