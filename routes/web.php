@@ -38,10 +38,10 @@ Route::post('/track-app-click', function (Request $request) {
     ]);
 })->name('track.app.click');
 
-// Blog post routes
+// Blog post routes (exclude reserved slugs so static pages are used)
 Route::get('/{post:slug}', function ($post) {
     $shareButton = ShareSnippet::where('active', true)->first();
     return view('vendor.filament-blog.blogs.show', compact('post', 'shareButton'));
-})->name('post.show');
+})->name('post.show')->where('post', '^(?!privacy-policy|football-predictions|soccer-betting-tips|vip-soccer-betting-tips).+$');
 
 Route::get('/sitemap.xml', [SitemapController::class, 'index']);
