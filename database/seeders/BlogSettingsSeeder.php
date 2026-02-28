@@ -14,9 +14,9 @@ class BlogSettingsSeeder extends Seeder
     public function run(): void
     {
         Setting::create([
-            'title' => 'Kenya Betting Tips',
+            'title' => 'Top Football App',
             'description' => 'Kenya\'s #1 Football Betting Tips Platform - Free Predictions & Jackpot Analysis',
-            'organization_name' => 'Kenya Betting Tips',
+            'organization_name' => 'Inmover Technologies',
             'quick_links' => [
                 [
                     'label' => 'Football Betting',
