@@ -7,13 +7,22 @@
                 <span class="font-medium">Privacy Policy</span>
             </div>
             <div class="mx-auto max-w-3xl prose prose-slate prose-p:text-slate-600">
-                <p class="text-lg text-slate-600">Learn how Top Football Predictions protects your data, ensures transparency, and keeps your betting experience safe.</p>
+                <p class="text-lg text-slate-600">Learn how Krypton Mobile Service protects your data, ensures transparency, and keeps your experience safe.</p>
 
-                <h1 class="text-3xl font-bold mt-8">Top Football App | Privacy Policy</h1>
-                <p>This Privacy Policy governs the collection, use, and sharing of your information by the Top Football mobile application (hereafter referred to as the "Application"), created and operated by <strong>Krypton Mobile Service</strong> (hereafter referred to as the "Service Provider"). By using this Application, you agree to the terms of this Privacy Policy.</p>
+                <h1 class="text-3xl font-bold mt-8">Privacy Policy (English)</h1>
+                <p>This Privacy Policy applies to mobile applications created and operated by <strong>Krypton Mobile Service</strong> (the “Service Provider”). By using our applications, you agree to the terms of this Privacy Policy.</p>
+
+                <h2>Our Applications</h2>
+                <ul>
+                    <li>GoalMind Soccer Predictions</li>
+                    <li>2+ ODDS Predictions</li>
+                    <li>Over 1.5+ Daily Betting Tips</li>
+                    <li>Top Football</li>
+                    <li>Double Chance Predictions</li>
+                </ul>
 
                 <h2>1. Information Collection and Use</h2>
-                <p>The Application collects information when you download, install, and use it. This may include:</p>
+                <p>Our applications collect information when you download, install, and use them. This may include:</p>
                 <ul>
                     <li><strong>Device Information:</strong> Your device's Internet Protocol (IP) address, the operating system of your device, and the pages you visit within the Application, including the time and duration of your visits.</li>
                     <li><strong>Usage Data:</strong> The amount of time spent on the Application.</li>
@@ -31,13 +40,12 @@
                 <p>The information you provide will be stored and used in accordance with this Privacy Policy.</p>
 
                 <h2>3. Third-Party Services</h2>
-                <p>The Application integrates third-party services that may collect and process data. These include:</p>
+                <p>Our applications may integrate third-party services that may collect and process data. These may include:</p>
                 <ul>
-                    <li>Google Play Services</li>
-                    <li>AdMob</li>
-                    <li>Google Analytics for Firebase</li>
-                    <li>Firebase Crashlytics</li>
-                    <li>RevenueCat</li>
+                    <li>Huawei Mobile Services</li>
+                    <li>Huawei Ads</li>
+                    <li>Firebase Analytics (if applicable)</li>
+                    <li>RevenueCat (if applicable)</li>
                 </ul>
                 <p>These third-party services have their own privacy policies regarding how they handle your data. Please review the privacy policies of these services for more details.</p>
                 <p>The Service Provider may share aggregated, anonymized data with third parties to help improve the Application and services.</p>
@@ -69,7 +77,7 @@
                 <p>By using the Application, you consent to the collection and use of your information as described in this Privacy Policy, including any updates.</p>
 
                 <h2>11. Contact Information</h2>
-                <p>If you have any questions or concerns about your privacy while using the Application, please contact the Service Provider at support@topfootballapp.com.</p>
+                <p>If you have any questions or concerns about your privacy while using our applications, please contact the Service Provider.</p>
 
                 <p class="mt-8 rounded-lg border border-slate-200 bg-slate-50 p-4 text-sm"><strong>Service Provider:</strong> Krypton Mobile Service</p>
             </div>
