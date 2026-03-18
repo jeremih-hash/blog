@@ -9,6 +9,13 @@
             <div class="mx-auto max-w-3xl prose prose-slate prose-p:text-slate-600">
                 <p class="text-lg text-slate-600">Learn how Krypton Mobile Service protects your data, ensures transparency, and keeps your experience safe.</p>
 
+                <div class="not-prose my-4 rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm">
+                    <strong>Language / 语言:</strong>
+                    <a href="/privacy-policy" class="font-semibold">English</a>
+                    <span class="px-1 opacity-60">|</span>
+                    <a href="/privacy-policy-zh" class="font-semibold">中文隐私政策</a>
+                </div>
+
                 <h1 class="text-3xl font-bold mt-8">Privacy Policy (English)</h1>
                 <p>This Privacy Policy applies to mobile applications created and operated by <strong>Krypton Mobile Service</strong> (the “Service Provider”). By using our applications, you agree to the terms of this Privacy Policy.</p>
 
@@ -63,6 +70,9 @@
 
                 <h2>6. Data Retention</h2>
                 <p>User-provided data will be retained as long as you use the Application. If you wish to delete your data, you can contact the Service Provider at support@topfootballapp.com, and they will respond promptly.</p>
+
+                <h2 id="your-rights">Your Rights</h2>
+                <p>Depending on your region, you may have the right to request access to, correction of, or deletion of your personal data, and to withdraw consent where applicable. To make a request, please contact us at <a href="mailto:support@topfootballapp.com">support@topfootballapp.com</a>.</p>
 
                 <h2>7. Children's Privacy</h2>
                 <p>The Application is not intended for children under 13. The Service Provider does not knowingly collect personal information from children under 13. If the Service Provider learns that a child under 13 has provided personal information, they will delete it immediately. Parents or guardians who believe their child has provided personal information can contact the Service Provider for necessary actions.</p>

@@ -10,6 +10,13 @@
             <div class="mx-auto max-w-3xl prose prose-slate prose-p:text-slate-600">
                 <p class="text-lg text-slate-600">了解 Krypton Mobile Service 如何保护您的数据并保持透明。</p>
 
+                <div class="not-prose my-4 rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm">
+                    <strong>语言 / Language:</strong>
+                    <a href="/privacy-policy-zh" class="font-semibold">中文</a>
+                    <span class="px-1 opacity-60">|</span>
+                    <a href="/privacy-policy" class="font-semibold">English Privacy Policy</a>
+                </div>
+
                 <h1 class="text-3xl font-bold mt-8">隐私政策（中文）</h1>
                 <p>
                     本隐私政策适用于由 <strong>Krypton Mobile Service</strong>（以下简称“开发者/服务提供商”）开发与运营的移动应用。
@@ -48,7 +55,7 @@
                 <h2>4. 数据安全</h2>
                 <p>我们会采取合理的技术与管理措施保护数据安全，防止未经授权的访问、披露、篡改或损坏。</p>
 
-                <h2>5. 您的权利</h2>
+                <h2 id="your-rights-zh">5. 您的权利</h2>
                 <p>您可以通过卸载应用停止信息收集。若您希望咨询或删除相关数据，可联系开发者。</p>
 
                 <h2>6. 联系方式</h2>
